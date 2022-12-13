@@ -1,0 +1,18 @@
+{% extends './layout.html' %}
+{% block title %}{{ data.titulo }}{% endblock %}
+
+{% block body %}
+<br>
+<div class="container">
+    <div class="container-box">
+        <h3>Chat:</h3>
+        <div id="display">
+            <h4>Bot: {{ data.response }}</h4>
+        </div>
+        <form action="/index" method="post">
+            <input type="text" name="usermessage">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+{% endblock %}
