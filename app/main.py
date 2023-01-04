@@ -21,7 +21,7 @@ app = Flask(__name__)
 
 #Todo here
 
-@app.route("/index", methods=["POST"])
+@app.route("/index", methods=["GET", "POST"])
 def index():
 
     userMessage = request.form.get("usermessage")

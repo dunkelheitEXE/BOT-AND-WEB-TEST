@@ -8,11 +8,24 @@
         <h3>Chat:</h3>
         <div id="display">
             <h4>Bot: {{ data.response }}</h4>
+            <hr>
+            <div id="didi">
+
+            </div>
         </div>
         <form action="/index" method="post">
             <input type="text" name="usermessage">
-            <input type="submit" value="Submit">
+            <input id="buton" type="submit" value="Submit">
         </form>
     </div>
 </div>
 {% endblock %}
+
+<script>
+    let element = document.getElementById("did");
+    let buton = document.getElementById("buton");
+
+    buton.addEventListener("click", function() {
+        element.innerHTML += '<h4>{{ data.response }}</h4>';
+    });
+</script>
